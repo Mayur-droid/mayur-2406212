@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paani - Pure Mineral Water</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #00e5ff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            background-color: #1f1f1f;
+            overflow: hidden;
+            border-bottom: 1px solid #00e5ff;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #00e5ff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #00e5ff;
+            color: #121212;
+        }
+        main {
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            background-color: #1f1f1f;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+            transition: transform 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #00e5ff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Paani</h1>
+        <p>Pure Mineral Water</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <section>
+            <h2>About Paani</h2>
+            <p>Paani is a premium mineral water brand committed to providing pure and refreshing water to keep you hydrated and healthy.</p>
+        </section>
+        <section>
+            <h2>Our Products</h2>
+            <div class="container">
+                <div class="box">
+                    <h3>500ml Bottle</h3>
+                    <p>Perfect for on-the-go hydration.</p>
+                </div>
+                <div class="box">
+                    <h3>1L Bottle</h3>
+                    <p>Ideal for daily hydration needs.</p>
+                </div>
+                <div class="box">
+                    <h3>5L Bottle</h3>
+                    <p>Great for family and office use.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Paani - Pure Mineral Water</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for contacting us!');
+        });
+    </script>
+</body>
+</html>
